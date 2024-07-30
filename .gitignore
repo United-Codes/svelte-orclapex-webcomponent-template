@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+public/build/bundle.css
+public/build/bundle.js
+public/build/bundle.js.map
+
+.DS_Store
