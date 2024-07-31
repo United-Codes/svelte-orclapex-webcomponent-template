@@ -29,16 +29,13 @@ function serve() {
   };
 }
 
-// Adjusted part for output
 const outputConfig = [
-  // Unminified output
   {
     sourcemap: true,
     format: "iife",
     name: "app",
     file: "public/build/bundle.js",
   },
-  // Minified output
   production && {
     sourcemap: false,
     format: "iife",
@@ -46,15 +43,15 @@ const outputConfig = [
     file: "public/build/bundle.min.js",
     plugins: [terser()],
   },
-].filter(Boolean); // Filters out false values, in case production is false
+].filter(Boolean);
 
 export default {
-  input: [production ? "src/SearchBoxPro.svelte" : "src/main.js"],
+  // change src/CountdownButton.svelte to your entry point component
+  input: [production ? "src/CountdownButton.svelte" : "src/main.js"],
   output: outputConfig,
   plugins: [
     svelte({
       compilerOptions: {
-        // enable run-time checks when not in production
         dev: !production,
         customElement: true,
       },

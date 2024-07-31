@@ -1,4 +1,6 @@
-<!-- This line will tell the svelte compiler to create a web component out of this component
+<!-- Only this file (and the imported files) will be compiled to a web component
+
+This line will tell the svelte compiler to create a web component out of this component
 Change the html tag to your taste to use it like this: <uc-countdown-button /> -->
 <svelte:options
   customElement={{ tag: "uc-countdown-button", shadow: "none" }}

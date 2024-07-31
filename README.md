@@ -15,4 +15,7 @@ Opinioated starter template to create WebComponents for intended use in Oracle A
 
 ## Get started
 
+## Resources
+
+- [Svelte Custom Elements API](https://svelte.dev/docs/custom-elements-api)
 

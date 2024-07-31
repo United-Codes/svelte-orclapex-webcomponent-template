@@ -1,3 +1,8 @@
+<!-- The contents of this file will not be exported as a web component
+     Instead use this for local development and testing by importing your component
+     and trying it out with different props
+     "bun run dev" will serve this file at http://localhost:8000
+-->
 <script>
   import CoundownButton from "./CountdownButton.svelte";
   import { onAPEXready, APEXenv, APEXversionInfo } from "./localAPEX";
@@ -7,6 +12,7 @@
   onAPEXready(() => {
     // you could use this to overwrite any apex.* functions
     /* e.g. here we overwrite apex.server.plugin to mock a response
+    needed for a plugin
     apex.server.plugin = (ajaxId, params, config) => {
       setTimeout(() => {
         apex.debug.info("apex.server.plugin", ajaxId, params, config);
