@@ -133,3 +133,4 @@ public/build/bundle.js
 public/build/bundle.js.map
 
 .DS_Store
+public/build/*

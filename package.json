@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
-    "@rgossiaux/svelte-headlessui": "^2.0.0",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",

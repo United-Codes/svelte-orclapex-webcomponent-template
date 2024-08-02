@@ -29,6 +29,6 @@
     }
   ],
   "files": {
-    "ignore": ["**/*/APEXenv.svelte", "rollup.config.js"]
+    "ignore": ["**/*/APEXenv.svelte", "rollup.config.js", "**/build/*"]
   }
 }
