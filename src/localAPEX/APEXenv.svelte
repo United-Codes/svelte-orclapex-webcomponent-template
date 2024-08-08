@@ -1,10 +1,19 @@
 <script>
+  import { themes, ThemeSwitcher } from "./index";
+
   window.v3 = "24.1.2";
   window.v2 = v3.split(".").slice(0, 2).join(".");
   window.applyVersion = (url) => {
     return url.replace(/#v3#/g, window.v3).replace(/#v2#/g, window.v2);
   };
   window.faVersion = "2.3";
+
+  window.theme = sessionStorage.getItem("theme") || themes[0].name;
+  window.themeSrc = themes
+    .find((t) => t.name === window.theme)
+    .src.map(
+      (src) => "https://static.oracle.com/cdn" + window.applyVersion(src)
+    );
 
   let jqueryReady = false;
 
@@ -56,9 +65,6 @@
       "https://static.oracle.com/cdn/apex/#v3#/themes/theme_42/#v2#/css/Core.min.css?v=#v3#"
     );
     loadCSS(
-      "https://static.oracle.com/cdn/apex/#v3#/themes/theme_42/#v2#/css/Vita.min.css?v=#v3#"
-    );
-    loadCSS(
       "https://static.oracle.com/cdn/apex/#v3#/app_ui/css/Theme-Standard.css?v=#v3#"
     );
     loadCSS(
@@ -67,6 +73,10 @@
     loadCSS(
       `https://static.oracle.com/cdn/apex/#v3#/libraries/font-apex/${window.faVersion}/css/font-apex.min.css?v=#v3#`
     );
+
+    for (const theme of window.themeSrc) {
+      loadCSS(theme);
+    }
   </script>
   <script>
     function loadFont(family, url) {
@@ -129,6 +139,7 @@
     )}
     on:load={allLoaded}
   ></script>
+  <ThemeSwitcher />
 </div>
 
 <!-- <style>
