@@ -1,5 +1,5 @@
 <script>
-  import { themes } from "./index";
+  import { themes } from "./constants";
 
   let theme = sessionStorage.getItem("theme") || themes[0].name;
 

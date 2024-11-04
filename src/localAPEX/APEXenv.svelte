@@ -1,7 +1,8 @@
 <script>
-  import { themes, ThemeSwitcher } from "./index";
+  import { themes } from "./constants";
+  import ThemeSwitcher from "./ThemeSwitcher.svelte";
 
-  window.v3 = "24.1.2";
+  window.v3 = "24.1.3";
   window.v2 = v3.split(".").slice(0, 2).join(".");
   window.applyVersion = (url) => {
     return url.replace(/#v3#/g, window.v3).replace(/#v2#/g, window.v2);

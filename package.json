@@ -9,17 +9,17 @@
     "start": "sirv public --no-clear"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@biomejs/biome": "^1.9.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^4.19.1",
+    "rollup": "^4.24.4",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.2.2",
-    "svelte": "^4.2.18"
+    "svelte": "^5.1.9"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.2"
+    "sirv-cli": "^3.0.0"
   }
 }
