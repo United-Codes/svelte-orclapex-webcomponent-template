@@ -1,7 +1,7 @@
 <script>
   import { themes } from "./constants";
 
-  let theme = sessionStorage.getItem("theme") || themes[0].name;
+  let theme = $state(sessionStorage.getItem("theme") || themes[0].name);
 
   function setSessionTheme(e) {
     console.log("setSessionTheme", e);
@@ -14,7 +14,7 @@
 </script>
 
 <div class="theme-switcher">
-  <select bind:value={theme} on:change={setSessionTheme}>
+  <select bind:value={theme} onchange={setSessionTheme}>
     {#each themes as theme}
       <option value={theme.name} selected={theme === theme.name}
         >{theme.name}</option

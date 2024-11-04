@@ -14,14 +14,20 @@ Change the html tag to your taste to use it like this: <uc-countdown-button /> -
 
   // export props like this
   // they will be attributes on the web component
-  // <uc-countdown-button buttonId="P12_ABC" />
-  export let buttonId = "";
+  
 
-  // you can also set default values
-  export let countdownSeconds = 20;
+  
+  /**
+   * @typedef {Object} Props
+   * @property {string} [buttonId] - <uc-countdown-button buttonId="P12_ABC" />
+   * @property {number} [countdownSeconds] - you can also set default values
+   */
+
+  /** @type {Props} */
+  let { buttonId = "", countdownSeconds = 20 } = $props();
 
   // private variables
-  let secondsLeft = countdownSeconds;
+  let secondsLeft = $state(countdownSeconds);
   let secondsPassed = 0;
   let interval = null;
 
@@ -51,7 +57,7 @@ Change the html tag to your taste to use it like this: <uc-countdown-button /> -
   class="t-Button t-Button--iconLeft"
   class:t-Button--warning={secondsLeft <= 5 && secondsLeft > 0}
   class:t-Button--danger={secondsLeft <= 0}
-  on:click={defuse}
+  onclick={defuse}
 >
   <span
     class="t-Icon t-Icon--left fa"

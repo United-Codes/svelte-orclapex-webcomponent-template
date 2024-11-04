@@ -7,7 +7,7 @@
   import CoundownButton from "./CountdownButton.svelte";
   import { onAPEXready, APEXenv, APEXversionInfo } from "./localAPEX";
 
-  let loaded = false;
+  let loaded = $state(false);
 
   onAPEXready(() => {
     // you could use this to overwrite any apex.* functions

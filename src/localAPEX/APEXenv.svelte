@@ -138,7 +138,7 @@
     src={window.applyVersion(
       "https://apex.oracle.com/i/libraries/apex/minified/desktop_all.min.js?v=#v3#"
     )}
-    on:load={allLoaded}
+    onload={allLoaded}
   ></script>
   <ThemeSwitcher />
 </div>
