@@ -1,6 +1,6 @@
 # Svelte Oracle APEX WebComponent Template
 
-Opinioated starter template to create WebComponents for intended use in Oracle APEX with Svelte.
+Opinionated starter template to create WebComponents for intended use in Oracle APEX with Svelte.
 
 ## FAQ
 
@@ -39,3 +39,4 @@ Getting these components onto the page can be done in a number of different ways
 - [Svelte Custom Elements API](https://svelte.dev/docs/custom-elements-api)
 - [Svelte 5 Documentation](https://svelte.dev/docs/svelte/overview)
 - [Bun](https://bun.sh/)
+- [Custom Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
