@@ -15,11 +15,15 @@ Opinionated starter template to create WebComponents for intended use in Oracle 
 
 ## Installation
 
-The package manager and runtime of choice in this repository is [Bun](https://bun.sh/). Install Bun according to their instructions, then run
+The package manager and runtime of choice in this repository is [Bun](https://bun.sh/).
+
+You can also use npm or yarn. Just replace `bun` with `npm` or `yarn` in the following commands.
+
+Install Bun according to their instructions, then run
 
 ```sh
-bun install
-bun dev
+bun install # or npm install
+bun dev     # or npm run dev
 ```
 
 The terminal will show your local address where you can view the example component and page.
@@ -31,6 +35,7 @@ Write Svelte 5 components, and import them into `App.svelte` to preview in the b
 Getting these components onto the page can be done in a number of different ways. A few options are:
 
 - Create a new template component. Import the js and css files and add them to the "Files to Load". Select the template component as the region type, then use attributes and a `select xyz from dual` query to populate any props.
+- Create a new region plug-in. Import the js and css files and add them to the "Files to Load". Render the web component with `htp.p`.
 - Add the file as application or workspace files, and import them to the entire app via User Interface Attributes. Now, when you'd like to see the Svelte component, you can use an APEX Static Region, and type in your custom element HTML.
 - Add the file as application or workspace files, and import them to the page via page settings. Again, you'd use the Static Region to insert your Svelte components.
 
