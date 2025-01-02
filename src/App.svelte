@@ -4,7 +4,7 @@
      "bun run dev" will serve this file at http://localhost:8000
 -->
 <script>
-  import CoundownButton from "./CountdownButton.svelte";
+  import CountdownButton from "./CountdownButton.svelte";
   import { onAPEXready, APEXenv, APEXversionInfo } from "./localAPEX";
 
   let loaded = $state(false);
@@ -36,9 +36,9 @@
 
   {#if loaded}
     <!-- Call you component here  -->
-    <CoundownButton buttonId="P100_COUNTDOWN1" countdownSeconds={10} />
-    <CoundownButton buttonId="P100_COUNTDOWN2" countdownSeconds={30} />
-    <CoundownButton buttonId="P100_COUNTDOWN3" countdownSeconds={120} />
+    <CountdownButton buttonId="P100_COUNTDOWN1" countdownSeconds={10} />
+    <CountdownButton buttonId="P100_COUNTDOWN2" countdownSeconds={30} />
+    <CountdownButton buttonId="P100_COUNTDOWN3" countdownSeconds={120} />
   {/if}
   <div style="margin-top: 30vh;">
     <span class="fa fa-404" aria-hidden="true"></span>
