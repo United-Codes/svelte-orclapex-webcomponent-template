@@ -1,6 +1,7 @@
 <script>
   import { themes } from "./constants";
   import ThemeSwitcher from "./ThemeSwitcher.svelte";
+  import initAPEXlang from "./initAPEXlang";
 
   window.v3 = "24.1.3";
   window.v2 = v3.split(".").slice(0, 2).join(".");
@@ -40,6 +41,8 @@
 
             apex.page.warnOnUnsavedChanges();
           } finally {
+            initAPEXlang(window.apex);
+
             apex.event.trigger(apex.gPageContext$, "apexreadyend");
             window.dispatchEvent(new Event("apexready"));
           }
